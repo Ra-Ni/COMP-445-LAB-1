@@ -109,7 +109,7 @@ For this reason, it is **important** to follow the standard HTTP structure and t
 
 ### HTTP Request Structure
 
-![] (img/HTTP_Request.jpeg)
+![](img/HTTP_Request.jpeg)
 
 Where:
 
@@ -157,7 +157,7 @@ Knowing that the client receives the server's response to their request, how doe
 
 This section is references when we need to parse the response a client receives from the server after it has read the data.
 
-![] (img/HTTP_Response.png)
+![](img/HTTP_Response.png)
 
 Where:
 
@@ -234,7 +234,7 @@ in.close();
 sock.close();
 ```
 
-![] (img/teapot.png)
+![](img/teapot.png)
 
 **IMPORTANT**: Although using PrintWriter and Scanner is acceptable, I recommend that you familiarize yourself with objects that use byte streams rather than text streams (Example: InputStreamReader/Writer)
 
