@@ -115,23 +115,23 @@ Where:
 
 ```
 Method:
-<p>GET: Used to acquire data</p>
-<p>POST: Used to push data</p>
+	GET: Used to acquire data
+	POST: Used to push data
 
 URL: 
-<p>Path of the request without the host</p>
-<p>Example: the URL field of www.httpbin.org/status/418 would be /status/418</p>
+	Path of the request without the host
+	Example: the URL field of www.httpbin.org/status/418 would be /status/418
 
 Version:
-<p>HTTP/1.0</p>
+	HTTP/1.0
 
 Header field name & value:
-<p>For both  GET and POST it can be anything</p>
-<p>For POST, must have at least Content-Length:<length of Entity Body>
+	For both  GET and POST it can be anything
+	For POST, must have at least Content-Length:<length of Entity Body>
 
 Entity Body:
-<p>GET: Nothing</p>
-<p>POST: Can be Nothing or Something</p>
+	GET: Nothing</p>
+	POST: Can be Nothing or Something
 
 Sp: Space character
 
@@ -155,39 +155,41 @@ These concerns need to be addressed.
 
 Knowing that the client receives the server's response to their request, how does the client understand what the server is communicating?
 
+This section is references when we need to parse the response a client receives from the server after it has read the data.
+
 ![] (img/HTTP_Response.png)
 
 Where:
 
 ```
 Version:
-<p> Is copied from the client's Version field. </p>
+	Is copied from the client's Version field.
 
 Phrase:
-<p>200 : OK </p>
-<p>-- Server successfully found the resource and has sent it back to the client. </p>
+	200 : OK 
+	-- Server successfully found the resource and has sent it back to the client.
 
-<p>404 : Not Found </p>
-<p>-- Server has not found anything matching the requested URI.</p>
-<p>-- For example, if the client wants /directory/hello.txt, and the server doesn't have it in /directory/hello.txt</p>
+	404 : Not Found 
+	-- Server has not found anything matching the requested URI.
+	-- For example, if the client wants /directory/hello.txt, and the server doesn't have it in /directory/hello.txt
 
-<p>201 : Created </p>
-<p>-- Server has successfully created a resource from a POST ONLY request.</p>
-<p>-- It is NOT mandatory to return a URI entity.</p>
+	201 : Created 
+	-- Server has successfully created a resource from a POST ONLY request.
+	-- It is NOT mandatory to return a URI entity.
 
-<p>400 : Bad Request </p>
-<p>-- Server doesn't understand the request.</p>
-<p>-- For example, if the request doesn't follow proper syntax or is malformed.</p>
+	400 : Bad Request 
+	-- Server doesn't understand the request.
+	-- For example, if the request doesn't follow proper syntax or is malformed.
 
-<p>403 : Forbidden </p>
-<p>-- Server understood the request, but refuses to 'service' it. </p>
-<p>-- For example, if the file has it's permissions set to not Readable/Writeable</p>
+	403 : Forbidden 
+	-- Server understood the request, but refuses to 'service' it. 
+	-- For example, if the file has it's permissions set to not Readable/Writeable
 
 Header field name & value:
-<p>Contains some headers used by the client, and adds new ones sometimes</p>
+	Contains some headers used by the client, and adds new ones sometimes
 
 Entity Body:
-<p>Data provided to client</p> 
+	Data provided to client
 ```
 
 ### Socket Utilization
@@ -235,6 +237,8 @@ sock.close();
 ![] (img/teapot.png)
 
 **IMPORTANT**: Although using PrintWriter and Scanner is acceptable, I recommend that you familiarize yourself with objects that use byte streams rather than text streams (Example: InputStreamReader/Writer)
+
+**IMPORTANT**: This section is only concerned with socket creation and utilization, refer to the previous sections and the lab handout on the **proper** way to send and receive messages. There should be classes (and not just one big class doing everything!).
 
 ### Command-Line Interface
 
