@@ -58,11 +58,7 @@ The distinguishing factor between Socket and Port is that a Socket is a logical 
 
 For this lab, we strictly focus on port 80.
 
-## Objective
-
-The objective of this lab is to create an HTTP client using only Java to access contents of websites on the internet. To achieve the objective, four major concerns need to be addressed.
-
-#### Importance of Standardization
+## Importance of Standardization
 
 ```
 Suppose Bob is a customer sitting in a restaurant and Alice is the waitress of that restaurant.
@@ -105,6 +101,11 @@ Standards can be changed by deviating away from them, but we have to ensure that
 For the World Wide Web, if the HTTP client (Bob) decided to implement rules out of the standard (we'll see this later on) and the HTTP server (Alice) was following the standard, then neither would have understood each other.
 
 For this reason, it is **important** to follow the standard HTTP structure and to respect it.
+
+
+## Objective
+
+The objective of this lab is to create an HTTP client using only Java to access contents of websites on the internet. To achieve the objective, four major concerns need to be addressed.
 
 
 ### HTTP Request Structure
